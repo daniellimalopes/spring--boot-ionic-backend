@@ -3,6 +3,7 @@ package com.daniellima.cursomc.domain;
 import java.io.Serializable;
 import java.util.Objects;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -30,6 +31,7 @@ public class Endereco implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "cliente_id")
 	private Cliente cliente;
+
 
 	@ManyToOne
 	@JoinColumn(name = "cidade_id")

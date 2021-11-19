@@ -52,7 +52,7 @@ public class CategoriaService {
 		return repo.findAll();
 	}
 	
-	//Paginacao
+	
 	public Page<Categoria> findPage(Integer page, Integer linesperpage, String orderBy, String direction){
 		PageRequest pageRequest = PageRequest.of(page, linesperpage, Direction.valueOf(direction), orderBy);
 		return repo.findAll(pageRequest);
