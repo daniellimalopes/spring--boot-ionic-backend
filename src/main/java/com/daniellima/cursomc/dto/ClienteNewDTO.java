@@ -2,24 +2,44 @@ package com.daniellima.cursomc.dto;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+
+import org.hibernate.validator.constraints.Length;
+
+import com.daniellima.cursomc.services.validation.ClienteInsert;
+
+@ClienteInsert
 public class ClienteNewDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	@NotEmpty(message="Preenchimento Obrigatório")
+	@Length(min=5, max=80, message="O peenchimento tem que contr no minimo 5 e maximo 80 caracteris")
 	private String nome;
+	@NotEmpty(message="Preenchimento Obrigatório")
+	@Email(message="Email inválido")
 	private String email;
+	@NotEmpty(message="Preenchimento Obrigatório")
 	private String cpfOucnpj;
+	
 	private Integer tipo;
 
 	private String lagradou;
+	
 	private String complemento;
+	
 	private String numero;
+	
 	private String bairro;
+	@NotEmpty(message="Preenchimento Obrigatório")
 	private String cep;
-
+	@NotEmpty(message="Preenchimento Obrigatório")
 	private String telefone1;
+	
 	private String telefone2;
+	
 	private String telefone3;
-
+	
 	private Integer cidade;
 
 	public ClienteNewDTO() {
