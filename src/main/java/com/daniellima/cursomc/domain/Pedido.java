@@ -44,6 +44,7 @@ public class Pedido implements Serializable {
 	
 	@OneToMany(mappedBy="id.pedido")
 	private Set<ItemPedido> itens = new HashSet<>();
+	
 
 	public Pedido() {
 	}

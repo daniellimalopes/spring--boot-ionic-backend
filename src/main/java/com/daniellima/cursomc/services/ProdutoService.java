@@ -38,4 +38,7 @@ public class ProdutoService {
 		return repo.search(nome, categorias, pageRequest);
 	}
 
+
+	
+
 }
