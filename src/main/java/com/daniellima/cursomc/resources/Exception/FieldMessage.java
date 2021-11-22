@@ -9,6 +9,7 @@ public class FieldMessage implements Serializable {
 	private String fieldName;
 	private String message;
 	
+	@SuppressWarnings("unused")
 	private FieldMessage() {
 	}
 
