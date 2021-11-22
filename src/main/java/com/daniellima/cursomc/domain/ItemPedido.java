@@ -31,6 +31,10 @@ public class ItemPedido implements Serializable {
 		this.quantidade = quantidade;
 		this.preco = preco;
 	}
+	
+	public double getSubTotal() {
+		return (preco - desconto) * quantidade;
+	}
 
 	//Os metodos abaixo dão acesso direto a pedido e produto sem a necessidade de 
 	//acessar o id do ItemPedido para depois acessar pedido e produto.
